@@ -37,6 +37,7 @@ so I found more sensors will give higher accuracy and RMSE can be improved with 
 
 Which challenges will a sensor fusion system face in real-life scenarios? Did you see any of these challenges in the project?
 Every sensor have it's weak point like camera in night and lidar for it's price and size and also in rains
-but i didn't face any as the data was good and the model already having good results
-
+and I belive that camera results are worst than that of lidar so as both fused I had lower RMSE so may be adding sensor give worst results if it's not well deployed but every sensor has it's challanges to solve to finally having best system
 # Can you think of ways to improve your tracking results in the future?
+Improve some results output later to have better outputs
+but over all the results still acceptable
