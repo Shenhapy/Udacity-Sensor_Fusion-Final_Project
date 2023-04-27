@@ -25,14 +25,14 @@ to have final results as shown in attached folder to this repositery with video 
 but also have RMSE graph
 <img src='4_Sensor Fusion Output/RSME_Graph.png'/>
 
-it wasn't normal to me to have a smaller RMSE than having lidar only but I found that it have higher overall accuracy
+it wasn't normal to me to have a smaller RMSE than having lidar only
 
 # Most Difficult Part?
 for me as still fresh gradute is to work with a huge code and having some specific tasks to finish that need to go in harmoney with the whole code 
 so it is needed to full understand how the whole process run to keep on track but it still a great experience
 
 # Do you see any benefits in camera-lidar fusion compared to lidar-only tracking (in theory and in your concrete results)?
-Yes, it wasn't normal to me to have a smaller RMSE than having lidar only but I found that it have higher overall accuracy
+Yes, it wasn't normal to me to have a smaller RMSE than having lidar only but I think that it has higher overall accuracy
 so I found more sensors will give higher accuracy and RMSE can be improved with better tunning
 
 Which challenges will a sensor fusion system face in real-life scenarios? Did you see any of these challenges in the project?
