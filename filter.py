@@ -21,15 +21,6 @@ SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.
 sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
 import misc.params as params 
 
-#to tune parameters easier
-# def matrix1(q1, q2, q3, q4):
-#     return np.matrix([[q1, 0,  0,  q2, 0,  0 ],
-#                       [0,  q1, 0,  0,  q2, 0 ],
-#                       [0,  0,  q1, 0,  0,  q2],
-#                       [q3, 0,  0,  q4, 0,  0 ],
-#                       [0,  q3, 0,  0,  q4, 0 ],
-#                       [0,  0,  q3, 0,  0,  q4]])
-
 
 class Filter:
     '''Kalman filter class'''
@@ -40,7 +31,6 @@ class Filter:
         ############
         # TODO Step 1: implement and return system matrix F
         ############
-        # return matrix1(1, 0.05, 0, 1)
         dt = params.dt
         # system matrix
         #6*6 matrix main diagolnal 1 and 3 dt
@@ -59,7 +49,6 @@ class Filter:
         ############
         # TODO Step 1: implement and return process noise covariance Q
         ############
-        # return matrix1(0.01, 0.001, 0.001, 0.01)
         q1 = (pow(params.dt,3) / 3) *params.q
         q2 = (pow(params.dt,2) / 2) *params.q
         q3 = params.dt *params.q
