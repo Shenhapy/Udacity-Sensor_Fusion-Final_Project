@@ -9,7 +9,7 @@ the output with old results
 the output with old results after some tuning
 <img src='1_EKF Outpuut/EKF_using old results_and tune some parameters.png'/>
 the output with correct results
-<img src='1_EKF Outpuut/EKF_32_with in range after using right results.png'/>
+<img src='1_EKF Outpuut/EKF_32_with in range after used right results.png'/>
 
 ## Trackmanagment
 As following lesson steps I found a non-satisfing results as it used Delete if score smaller than 0.17 but as I decrease this to 0.1 I had the required output with over all high RMSE of 0.78 but it was fine for this task
