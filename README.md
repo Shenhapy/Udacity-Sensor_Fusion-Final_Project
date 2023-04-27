@@ -1,4 +1,4 @@
-# Udacity-Sensor_Fusion-Final_Project
+# Udacity_Sensor-Fusion_Final-Project
 This is my project for Udacity Self Driving Cars Nano Degree Second Module Sensor fusion Final Project
 Check above folders for images of results
 # Recap, Results and Technical problems faced during project
