@@ -75,17 +75,15 @@ class Association:
         #A=self.association_matrix
         if np.min(self.association_matrix) == np.inf:
             return np.nan, np.nan
-        # the following only works for at most one track and one measurement
+
         ij_min = np.unravel_index(np.argmin(self.association_matrix, axis=None), self.association_matrix.shape) 
         
-        ## Delete row and column
         self.association_matrix = np.delete(self.association_matrix, ij_min[0], axis=0)
         self.association_matrix = np.delete(self.association_matrix, ij_min[1], axis=1)
 
-        
         update_track = self.unassigned_tracks[ij_min[0]]
         update_meas = self.unassigned_meas[ij_min[1]]
-        # remove from list
+
         self.unassigned_tracks.remove(update_track) 
         self.unassigned_meas.remove(update_meas)
             

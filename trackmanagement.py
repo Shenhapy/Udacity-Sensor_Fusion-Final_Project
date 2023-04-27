@@ -34,26 +34,21 @@ class Track:
         # - initialize track state and track score with appropriate values
         ############
         
-        # transform measurement to vehicle coordinates
         pos_sens = np.ones((meas.sensor.dim_meas+1 ,1))
         pos_sens[0:meas.sensor.dim_meas] = meas.z[0:meas.sensor.dim_meas]
         pos_veh = meas.sensor.sens_to_veh * pos_sens
         
-        # save initial state from measurement
         self.x = np.zeros((params.dim_state,1))
         self.x[:meas.sensor.dim_meas] = pos_veh[:meas.sensor.dim_meas]
             
-        # set up position estimation error covariance
-        M_rot = meas.sensor.sens_to_veh[0:3, 0:3] # rotation matrix from sensor to vehicle coordinates
+        M_rot = meas.sensor.sens_to_veh[0:3, 0:3]
         P_pos = M_rot  *meas.R*  np.transpose(M_rot)
 
-        # set up velocity estimation error covariance
         P_vel = np.zeros((meas.sensor.dim_meas,meas.sensor.dim_meas))
         P_vel[0, 0] = pow(params.sigma_p44,2)
         P_vel[1, 1] = pow(params.sigma_p55,2)
         P_vel[2, 2] = pow(params.sigma_p66,2)
         
-        # overall covariance initialization
         self.P = np.zeros((params.dim_state,params.dim_state))
         self.P[:meas.sensor.dim_meas, :meas.sensor.dim_meas] = P_pos
         self.P[meas.sensor.dim_meas:, meas.sensor.dim_meas:] = P_vel
